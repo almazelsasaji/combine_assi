@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IzelCrafts - Premium Crochet Gifts</title>
+
+    <style>
+        :root {
+            --emerald-deep: #0f5c48;
+            --emerald-mid: #1a6a53;
+            --emerald-soft: #2d7a62;
+            --cream: #f6f0df;
+            --gold: #c9ab72;
+            --warm-bg: #f3ecd9;
+            --line: #ded2b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #faf7ec 0%, var(--warm-bg) 100%);
+            min-height: 100vh;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(90deg, var(--emerald-deep) 0%, var(--emerald-mid) 100%);
+            color: white;
+            padding: 15px 40px;
+            box-shadow: 0 4px 15px rgba(15, 92, 72, 0.35);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar div:last-child {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .logo img {
+            height: 65px;
+            border-radius: 50%;
+            box-shadow: 0 6px 16px rgba(246, 240, 223, 0.35);
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--emerald-deep) 0%, var(--emerald-mid) 55%, var(--emerald-soft) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '✽';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            color: var(--cream);
+            opacity: 0.45;
+        }
+        
+        .hero::after {
+            content: '✽';
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: var(--cream);
+            opacity: 0.45;
+        }
+
+        .hero img {
+            width: 160px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: normal;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            font-style: italic;
+            color: var(--cream);
+        }
+
+        /* FORM SECTION */
+        .form-section {
+            display: flex;
+            justify-content: center;
+            margin-top: -40px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            width: 380px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(15, 92, 72, 0.16);
+            border-top: 6px solid var(--emerald-mid);
+            position: relative;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 30px;
+            width: 40px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 3px;
+        }
+        
+        .card::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            right: 30px;
+            width: 40px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 3px;
+        }
+
+        .card h2 {
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--emerald-deep);
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border: 2px solid var(--line);
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: var(--emerald-mid);
+            background-color: #faf7ec;
+        }
+        
+        input::placeholder {
+            color: #999;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, var(--emerald-deep), var(--emerald-soft));
+            border: none;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(15, 92, 72, 0.35);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+
+        #msg {
+            margin-top: 15px;
+            text-align: center;
+            color: var(--emerald-mid);
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            color: #6e6757;
+            font-size: 14px;
+            border-top: 1px solid var(--line);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="izellogo.png" alt="IzelCrafts Logo">
+        </div>
+        <div>Crochet Gifts</div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <img src="izellogo.png" alt="Logo">
+        <h1>Premium Crochet Gifts 🎁</h1>
+        <p>Handmade crochet gifts for every occasion</p>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-section">
+        <div class="card">
+            <h2>Order Inquiry</h2>
+
+            <form onsubmit="submitForm(event)">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Product Interest (e.g., Blanket, Amigurumi)">
+                <button type="submit">Send Inquiry</button>
+            </form>
+
+            <p id="msg"></p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 IzelCrafts | All Rights Reserved
+    </div>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            document.getElementById("msg").innerHTML = "✅ Thank you! We'll get back to you soon with your crochet gift details.";
+        }
+    </script>
+
+</body>
+</html>
